@@ -1,4 +1,6 @@
-# interface
+# Run Tracker Interface
+
+Presentation layer for run tracker app. Built in VueJS/Vuex
 
 ## Project setup
 ```

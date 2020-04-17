@@ -1,0 +1,104 @@
+/**************
+** SHARED STYLES
+**************/
+
+%text-input {
+    position: relative;
+
+    label {
+        position: absolute;
+        font-size: 1.3em;
+        left: 0.7em;
+        top: 2em;
+        background-color: $backgroundGrey;
+        transition: 0.3s transform ease-in-out, 0.3s color ease;
+    }
+
+    input {
+        border: 1px solid #666;
+        background-color: $backgroundGrey;
+        border-radius: 4px;
+        box-sizing: border-box;
+        width: 100%;
+        margin: 1em 0;
+        font-size: 1.5em;
+        transition: all 0.3s ease;
+        padding: 17px 8px;
+
+        &:focus {
+            border: 1px solid $highlightAqua;
+            outline: none;
+        }
+
+        &:focus~label {
+            transform: translateY(-1.5em);
+            color: $highlightAqua;
+        }
+
+        &:valid~label {
+            background-color: $backgroundGrey;
+            transform: translateY(-1.5em);
+            color: $highlightAqua;
+        }
+    }
+
+    svg {
+        position: absolute;
+        font-size: 1.4em;
+        top: 1.8em;
+        right: 0.3em;
+        background-color: $backgroundGrey;
+        padding: 6px;
+    }
+
+    .invalid {
+        color: red;
+    }
+
+    .valid {
+        color: $successGreen;
+    }
+
+    .bounce_in-enter-active {
+        transition: transform 0.4s;
+    }
+
+    .bounce_in-enter {
+        transform: scale(1.3);
+    }
+}
+
+%form-page {
+    padding: 1em 0;
+    text-align: left;
+    position: relative;
+
+    .input_wrapper {
+        margin-bottom: 1.3em;
+
+        label {
+            color: $standardText;
+            font-size: 0.7em;
+            display: block;
+        }
+    }
+}
+
+%centered-button {
+    text-align: center;
+
+    button {
+        display: block;
+        font-size: 1em;
+        margin: 0 auto;
+        color: $linkGreen;
+    }
+
+    span {
+        display: inline-block;
+        margin-top: 0.6em;
+        font-size: 0.7em;
+        text-decoration: underline;
+        color: $highlightAqua;
+    }
+}
